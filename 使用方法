@@ -1,3 +1,9 @@
-        lockView = [[LockView alloc] initWithFrame:RECT(0, 0, 320, CGRectGetHeight(self.view.frame))];
+调用LockView
+        LockView *lockView = [[LockView alloc] initWithFrame:RECT(0, 0, 320, CGRectGetHeight(self.view.frame))];
         lockView.delegate = (id<LockViewDelegate>)self;
         [self.view addSubview:lockView];
+
+
+在创建LockView的ViewController中实现LockViewDelegate的delegate方法：
+      - (void)lockViewToDetailDelegete;
+      - (void)forgetLockPWDelegate;
